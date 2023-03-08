@@ -1,0 +1,31 @@
+
+// Exercice 1
+
+// Demander à l'utilisateur son numéro
+// Verifier qu'il a bien entrer un numéro
+// S'il n'a pas entré un numéro :
+// Lui afficher "Veuillez saisir un numéro valide"
+// Sinon :
+// Si le numéro entré est compris entre 1 et 5 :
+// Lui afficher "Ticket gagant !"
+// Sinon :
+// Lui afficher "Perdu !"
+
+
+
+// Exercice 2 
+
+// Recuperer la liste des articles achetés et leur prix HT
+// Additionner le prix de tous les articles achetés
+// Multiplier par 1.2 la somme de tous les produits achetés
+
+
+// Exercice 3
+
+const organism: string = "Simplon";
+const learners: number = 15;
+const promotionStarted: boolean = true;
+const learnerNames: any[] (ou string[] dans ce cas précis)  =["Vincent", "Toufik", "Tom", "Samuel", "Orhan"];
+const pedagogicalReferent: Object = { name: "Tiphaine", work: "Simplon" }
+const absentLearner: undefined = undefined
+const excludedLearner: unknown
