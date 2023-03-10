@@ -32,7 +32,7 @@ const countries: string[] = ["France", "Italie", "Espagne", "Portugal", "Allemag
 let sentence: string = '';
 
 for (let i = 0; i < countries.length; i++) {
-    sentence += countries[i] + ', ';
+    sentence += countries[i] + (i !== countries.length - 1 ? ', ' : '');
 }
 
 console.log(sentence);
@@ -50,7 +50,7 @@ console.log(sentence);
 
 
 const numbers: number[] = [123, 999, 340, 12390];
-let results: number[] = [];
+const results: number[] = [];
 
 for (let i = 0; i < numbers.length; i++) {
     results.push(numbers[i] * 180);
@@ -64,11 +64,20 @@ console.log(results);
 // Créer une constante contenant l'objet suivant : { name: 'Marchal', surname: 'Mickeal', age: 19 }, veillez à bien le typer.
 // À l'aide d'une condition vérifier si Mickeal est bien majeur, si c'est le cas afficher un message dans la console du navigateur.
 
-const person: { name: string, surname: string, age: number } = { name: "Marchal", surname: "Mickael", age: 19 };
-
-if (person.age >= 18) {
-    console.log("Mickael est majeur");
+interface Person {
+    name: string;
+    surname: string;
+    age: number;
 }
+
+const person: Person = {
+    name: "Marchal",
+    surname: "Mickael",
+    age: 19
+};
+
+person.age >= 18 ? console.log("Mickael est majeur") : null;
+
 
 
 // Exercice # 5
@@ -94,15 +103,15 @@ console.log(`Bonjour, mon nom est ${person2.nom2} ${person2.prenom2}, j'ai ${per
 //console du navigateur la même phrase que l'exercice # 5 pour chaque valeur du tableau.
 
 
-const persons: { nom: string, prenom: string, age: number }[] = [
-    { nom: "Boulanger", prenom: "Laurent", age: 42 },
-    { nom: "Auvray", prenom: "René", age: 28 },
-    { nom: "Girard", prenom: "Julie", age: 35 },
-    { nom: "Lefèvre", prenom: "Lucie", age: 19 },
-    { nom: "Aubin", prenom: "Thomas", age: 57 },
+const persons: Person[] = [
+    { name: "Boulanger", surname: "Laurent", age: 42 },
+    { name: "Auvray", surname: "René", age: 28 },
+    { name: "Girard", surname: "Julie", age: 35 },
+    { name: "Lefèvre", surname: "Lucie", age: 19 },
+    { name: "Aubin", surname: "Thomas", age: 57 },
 ];
 
 for (let i = 0; i < persons.length; i++) {
     const person = persons[i];
-    console.log(`Bonjour, mon nom est ${person.nom} ${person.prenom}, j'ai ${person.age} ans.`);
+    console.log(`Bonjour, mon nom est ${person.name} ${person.surname}, j'ai ${person.age} ans.`);
 }
